@@ -2,6 +2,42 @@ $(".burger").click(function () {
 	$(".burger, .header__items").toggleClass("active");
 });
 
+function mobileOnlySlider() {
+  $(document).ready(function () {
+    $('.portfolio__grid').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      arrows: false,
+      touchMove: true,
+      dots: true,
+      pauseOnHover: false,
+      responsive: [{
+        breakpoint: 568,
+        settings: {
+          slidesToShow: 1,
+          settings: "unslick"
+        }
+      }]
+    });
+  });
+}
+if (window.innerWidth < 480) {
+  mobileOnlySlider();
+}
+$(window).resize(function (e) {
+  if (window.innerWidth < 480) {
+    if (!$('.portfolio__grid').hasClass('slick-initialized')) {
+      mobileOnlySlider();
+    }
+
+  } else {
+    if ($('.portfolio__grid').hasClass('slick-initialized')) {
+      $('.portfolio__grid').slick('unslick');
+    }
+  }
+});
+
 
 function rain() {
 	let amount = 30;
