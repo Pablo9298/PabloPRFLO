@@ -7,9 +7,8 @@ function mobileOnlySlider() {
     $('.portfolio__grid').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       arrows: false,
-			fade: true,
       touchMove: true,
       dots: true,
       pauseOnHover: false,

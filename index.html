@@ -8,15 +8,17 @@
 	<title>Порфолио Пабло</title>
 
 	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 	<!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-	<header class="header">
+	<header class="header"
+		style="background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1614252799_25-p-krasivii-fon-chernogo-tsveta-29.jpg');">
 		<div class="container">
 			<nav>
-				<a class="header__logo" href="#">
+				<a class="header__logo logo" href="#">
 					<!-- <img src="http://picsum.photos/50" alt="Логотип Пабло"> -->
 					PabloDev
 				</a>
@@ -27,11 +29,11 @@
 				</div>
 
 				<ul class="header__items">
-					<li><a href="#">Обо мне</a></li>
-					<li><a href="#">Навыки</a></li>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Портфолио</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="#about">Обо мне</a></li>
+					<li><a href="#skills">Навыки</a></li>
+					<li><a href="#services">Услуги</a></li>
+					<li><a href="#portfolio">Портфолио</a></li>
+					<li><a href="#contacts">Контакты</a></li>
 				</ul>
 
 				<div class="burger">
@@ -54,15 +56,16 @@
 	</header>
 
 	<main>
-
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 
 				<h1 class="about__title title">Обо мне</h1>
 
 				<div class="about__wrapper">
 					<div class="about__img">
-						<img src="https://sun6-22.userapi.com/s/v1/ig2/ew3zRKFQL-MnqoH8chmJkjl6jb0LXnqK-WufQAhIq6T1yHezbIaj5eWkISh-bF2iZB_wQWm4sYmxlpw-UUvz57X-.jpg?size=1200x1200&quality=96&crop=0,0,1200,1200&ava=1" alt="random">
+						<img
+							src="https://sun6-22.userapi.com/s/v1/ig2/ew3zRKFQL-MnqoH8chmJkjl6jb0LXnqK-WufQAhIq6T1yHezbIaj5eWkISh-bF2iZB_wQWm4sYmxlpw-UUvz57X-.jpg?size=1200x1200&quality=96&crop=0,0,1200,1200&ava=1"
+							alt="random">
 					</div>
 
 					<p>
@@ -75,7 +78,7 @@
 			</div>
 		</section>
 
-		<section class="skills">
+		<section class="skills" id="skills">
 			<div class="container">
 
 				<h1 class="skills__title title">Навыки</h1>
@@ -100,7 +103,7 @@
 			</div>
 		</section>
 
-		<section class="services">
+		<section class="services" id="services">
 			<div class="container">
 
 				<h2 class="services__title title">
@@ -132,44 +135,80 @@
 			</div>
 		</section>
 
-		<section class="portfolio">
+		<section class="portfolio" id="portfolio">
 			<div class="container">
 				<h1 class="portfolio__title title">Мои работы</h1>
 				<div class="portfolio__grid">
 
 					<div class="portfolio__box box-1">
-						<img src="https://pbs.twimg.com/profile_images/869460773189419008/Yn1CIDtW.jpg" alt="random">
+						<img src="images/barberr.png" alt="random">
 						<a href="https://pablo9298.github.io/sergio-barber/app/" target="_blank">Sergio <br> Barber</a>
 					</div>
 
 					<div class="portfolio__box box-2">
-						<img src="https://i.playground.ru/a/050ZfrxUuPVLaZqSuNQ2-w.jpeg" alt="random">
+						<img src="images/anow.png" alt="random">
 						<a href="https://pablo9298.github.io/anow/" target="_blank">ANOW</a>
 					</div>
 
 					<div class="portfolio__box box-3">
-						<img src="https://pic.rutubelist.ru/user/6b/d1/6bd1466f57fc88e06ef05e5f26803530.png" alt="random">
+						<img src="images/boosted.png" alt="random">
 						<a href="https://pablo9298.github.io/boostedusa/app/" target="_blank">Boosted <br> USA</a>
 					</div>
 
 					<div class="portfolio__box box-4">
-						<img src="https://coolsen.ru/wp-content/uploads/2021/11/142-20211126_191434.jpg" alt="random">
+						<img src="images/computer.png" alt="random">
 						<a href="https://pablo9298.github.io/computers/" target="_blank">Computers</a>
 					</div>
 
 					<div class="portfolio__box box-5">
-						<img src="https://yt3.ggpht.com/ytc/AMLnZu-2yPdP0DXyT_dCN3XfZtOGVEuux5cHeS1jnVDx=s900-c-k-c0x00ffffff-no-rj" alt="random">
+						<img src="images/traveland.png"
+							alt="random">
 						<a href="https://pablo9298.github.io/traveland/" target="_blank">traveland</a>
 					</div>
 
 				</div>
 			</div>
 		</section>
-
 	</main>
 
-	<footer>
+	<footer class="footer" id="contacts">
+		<div class="container">
 
+			<h1 class="footer__title title">
+				Мои контакты
+			</h1>
+
+			<a class="footer__logo logo" href="#">
+				<!-- <img src="http://picsum.photos/50" alt="Логотип Пабло"> -->
+				PabloDev
+			</a>
+
+			<ul>
+				<li>
+					<a href="https://t.me/pabloprb" target="_blank">
+						<i class="fa-brands fa-telegram"></i>
+					</a>
+				</li>
+
+				<li>
+					<a href="viber://chat?number=[+37255557576]" target="_blank">
+						<i class="fa-brands fa-viber"></i>
+					</a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa-brands fa-whatsapp"></i>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.facebook.com/pahaOo" target="_blank">
+						<i class="fa-brands fa-facebook"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
