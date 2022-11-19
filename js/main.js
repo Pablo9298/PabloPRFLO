@@ -1,5 +1,15 @@
 $(".burger").click(function () {
 	$(".burger, .header__items").toggleClass("active");
+	$('body').toggleClass('lock');
+});
+
+$('.header__link').on('click', function (event) {
+	event.preventDefault();
+	var id = $(this).attr('href'),
+		top = $(id).offset().top;
+	$('body,html').animate({
+		scrollTop: top
+	}, 1500);
 });
 
 function mobileOnlySlider() {
@@ -61,21 +71,18 @@ function rain() {
 }
 rain();
 
-// let skillsCard = document.querySelectorAll(".skills__card"),
-// 	skillsProgress = document.querySelectorAll(".skills__progress");
+var headerTop = $('.header__nav');
+	var doc = $(document);
 
-// let skillsProgressStart = 0,
-// 	skillsProgressEnd = 90,
-// 	speed = 30;
+	function headerFixed() {
+		var threshold = doc.scrollTop() > 150;
 
-// let progress = setInterval(() => {
-// 	skillsProgressStart++;
+		if (threshold) {
+			headerTop.addClass('scrolled');
+		} else {
+			headerTop.removeClass('scrolled');
+		}
+	}
+	$(window).on('scroll', headerFixed);
 
-// 	skillsProgress.textContent = `${skillsProgressStart}%`
-// 	skillsCard.style.background = `conic-gradient(#37a7a2 ${skillsProgressStart * 3.6}deg, #ededed 0deg)`
-
-// 	if(skillsProgressStart == skillsProgressEnd){
-// 		clearInterval(progress);
-// 	}
-
-// }, speed);
+	headerFixed();
